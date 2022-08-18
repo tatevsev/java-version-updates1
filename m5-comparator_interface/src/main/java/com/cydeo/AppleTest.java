@@ -6,6 +6,7 @@ import java.util.List;
 
 import static java.util.Comparator.comparing;
 
+
 public class AppleTest {
 
     public static void main(String[] args) {
@@ -24,6 +25,14 @@ public class AppleTest {
         inventory.sort(comparing(Apple::getWeight));
         System.out.println(inventory);
 
+        //Reversed
+        inventory.sort(comparing(Apple::getWeight).reversed());
+        System.out.println(inventory);
+
+        //Chaining
+        inventory
+                .sort(comparing(Apple::getWeight)
+                .reversed().thenComparing(Apple::getColor));
 
 
 
