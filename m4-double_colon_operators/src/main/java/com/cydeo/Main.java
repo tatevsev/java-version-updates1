@@ -29,6 +29,7 @@ public class Main {
         Function<Integer,Double> b = new MyClass()::method;
         BiFunction<MyClass,Integer,Double> b1 = MyClass::method;
 
+
         Consumer<Integer> display = i -> System.out.println(i);
         Consumer<Integer> display2 = System.out::println;
 
