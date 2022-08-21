@@ -57,6 +57,9 @@ public class FindingMatching {
         System.out.println(dMin.get());
 
         System.out.println("Max");
+        Optional<Dish> dMax = DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(dMax);
+
 
 
 
